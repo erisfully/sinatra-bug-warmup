@@ -7,4 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.boolean :name_is_hunter, null: false
     end
   end
+  def down
+    drop_table :users
+  end
 end

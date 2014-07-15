@@ -13,7 +13,6 @@ feature "Registration" do
 
     click_button "Register"
 
-    save_and_open_page
     expect(page).to have_content "Thanks for signing up"
   end
 end
