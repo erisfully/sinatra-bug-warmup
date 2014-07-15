@@ -4,8 +4,6 @@ feature "Registration" do
   scenario "A user can create an account and log in" do
     visit "/"
 
-    save_and_open_page
-
     click_link "Register"
 
     fill_in "Username", with: "huntanumba1"
@@ -15,6 +13,7 @@ feature "Registration" do
 
     click_button "Register"
 
+    save_and_open_page
     expect(page).to have_content "Thanks for signing up"
   end
 end
