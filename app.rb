@@ -20,7 +20,7 @@ class App < Sinatra::Base
     erb :register
   end
 
-  post "/registrations" do
+  post "/register" do
     insert_sql = <<-SQL
       INSERT INTO users (username, email, password, name_is_hunter)
       VALUES ('#{params[:username]}', '#{params[:email]}', '#{params[:password]}', '#{params[:name_is_hunter]}')
