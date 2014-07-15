@@ -1,6 +1,10 @@
+require 'spec_helper'
+
 feature "Registration" do
   scenario "A user can create an account and log in" do
     visit "/"
+
+    save_and_open_page
 
     click_link "Register"
 
